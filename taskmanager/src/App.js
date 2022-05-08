@@ -112,6 +112,7 @@ function App() {
               type="text" 
               name="title" 
               placeholder="Titulo da tarefa" 
+              autoComplete="off" 
               onChange={(e) => setTitle(e.target.value)}
               value={title || ""}
               required 
@@ -123,6 +124,7 @@ function App() {
               type="text" 
               name="time" 
               placeholder="Tempo estimado (em horas)" 
+              autoComplete="off" 
               onChange={(e) => setTime(e.target.value)}
               value={time || ""}
               required 
