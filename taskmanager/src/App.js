@@ -104,14 +104,14 @@ function App() {
         <h1>React Todo</h1>
       </div>
       <div className="form-todo">
-        <h2>Insira a sua proxima tarefa</h2>
+        <h2>Enter your next task</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-control">
-            <label htmlFor="title">O que voce vai fazer?</label>
+            <label htmlFor="title">What will you do?</label>
             <input 
               type="text" 
               name="title" 
-              placeholder="Titulo da tarefa" 
+              placeholder="Task title" 
               autoComplete="off" 
               onChange={(e) => setTitle(e.target.value)}
               value={title || ""}
@@ -119,27 +119,27 @@ function App() {
             />
           </div>
           <div className="form-control">
-            <label htmlFor="time">Duracao:</label>
+            <label htmlFor="time">Duration:</label>
             <input 
               type="text" 
               name="time" 
-              placeholder="Tempo estimado (em horas)" 
+              placeholder="Estimated time (in hours)" 
               autoComplete="off" 
               onChange={(e) => setTime(e.target.value)}
               value={time || ""}
               required 
             />
           </div>
-          <input type="submit" value="Criar tarefa" />      
+          <input type="submit" value="Create task" />      
         </form>
       </div>
       <div className="list-todo">
-        <h2>Lista de tarefas:</h2>
-        {todos.length === 0 && <p>Nao ha tarefas</p>}
+        <h2>To-do list:</h2>
+        {todos.length === 0 && <p>There are no tasks</p>}
         {todos.map((todo) => (
           <div className="todo" key={todo.id}>
             <h3 className={todo.done ? "todo-done" : ""}>{todo.title}</h3>
-            <p>Duracao: {todo.time}</p>
+            <p>Duration: {todo.time}</p>
             <div className="actions">
               <span onClick={() => handleEdit(todo)}>
                 {!todo.done ? <BsBookmarkCheck /> : <BsBookmarkCheckFill />}
