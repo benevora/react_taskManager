@@ -17,9 +17,10 @@
 }
 
 .form-todo {
-  padding: 1em;
+  padding: 4em 2em;
   margin: 0 2em;
   border-bottom: 1px solid #2c3035;
+  padding-top: 1em;
 }
 
 .form-todo h2, .list-todo h2 {
@@ -52,12 +53,15 @@ input[type="submit"] {
   background-color: #333;
   color: #eee;
   font-weight: bold;
-  display: block;
-  width: 100%;
+  /* display: block; */
+  display: flex;
+  /* width: 100%; */
   border: 1px solid #222;
   border-radius: 5px;
   padding: 1em;
   cursor: pointer;
+  float: right;
+  
 }
 
 .list-todo {
