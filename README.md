@@ -1,5 +1,6 @@
 # react_taskManager
-project built with react
+
+It's a project built with react, where we can manage our tasks, such as adding, completing and deleting them
 
 Steps to run the project after cloning it:
 
